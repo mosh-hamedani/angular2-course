@@ -6,12 +6,15 @@ import {HomeComponent} from './home.component';
 import {UsersComponent} from './users.component';
 import {UserFormComponent} from './user-form.component';
 import {PostsComponent} from './posts.component';
+import {NotFoundComponent} from './not-found.component';
 
 @RouteConfig([
 	{ path: '/', name: 'Home', component: HomeComponent },
 	{ path: '/users', name: 'Users', component: UsersComponent },
+	{ path: '/users/:id', name: 'EditUser', component: UserFormComponent },
 	{ path: '/users/new', name: 'NewUser', component: UserFormComponent },
     { path: '/posts', name: 'Posts', component: PostsComponent },
+    { path: '/not-found', name: 'NotFound', component: NotFoundComponent },
 	{ path: '/*other', name: 'Other', redirectTo: ['Home'] }
 ])
 @Component({
