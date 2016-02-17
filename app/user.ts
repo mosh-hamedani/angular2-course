@@ -7,6 +7,7 @@ export class Address {
 }
 
 export class User {
+    id: number;
     name: string;
     phone: string;
     email: string; 
