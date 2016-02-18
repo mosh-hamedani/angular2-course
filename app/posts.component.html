@@ -16,6 +16,7 @@
             <div class="panel-body">
                 <p>{{ currentPost.body }}</p>
                 <hr/>
+                <spinner [visible]="commentsLoading"></spinner>
                 <div class="media" *ngFor="#comment of currentPost.comments">
                     <div class="media-left">
                         <a href="#">
