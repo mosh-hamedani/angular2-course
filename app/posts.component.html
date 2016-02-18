@@ -3,10 +3,7 @@
     <div class="col-md-6">
         <spinner [visible]="isLoading"></spinner>
         <ul class="list-group posts">
-            <li *ngFor="#post of posts"
-                class="list-group-item"
-                [class.active]="currentPost == post"
-                (click)="select(post)">
+            <li *ngFor="#post of posts" class="list-group-item" [class.active]="currentPost == post" (click)="select(post)">
                 {{ post.title }}
             </li>
         </ul>
@@ -18,7 +15,20 @@
             </div>
             <div class="panel-body">
                 <p>{{ currentPost.body }}</p>
+                <hr/>
+                <div class="media" *ngFor="#comment of currentPost.comments">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object thumbnail" src="http://lorempixel.com/80/80/people?random={{ comment.id }}" alt="...">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">
+                            {{ comment.name }}
+                        </h4> 
+                        {{ comment.body }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
