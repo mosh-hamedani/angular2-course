@@ -4,7 +4,7 @@ import {RouterLink} from 'angular2/router';
 import {UserService} from './user.service';
 
 @Component({
-    templateUrl: 'app/users.component.html',
+    templateUrl: 'app/users/users.component.html',
     providers: [UserService],
     directives: [RouterLink]
 })
