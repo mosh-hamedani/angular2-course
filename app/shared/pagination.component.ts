@@ -1,5 +1,5 @@
-import {Component, Input, Output, EventEmitter} from 'angular2/core';
-import {OnChanges} from 'angular2/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {OnChanges} from '@angular/core';
 
 @Component({
 	selector: 'pagination',
@@ -11,7 +11,7 @@ import {OnChanges} from 'angular2/core';
                 <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-            <li [class.active]="currentPage == page" *ngFor="#page of pages" (click)="changePage(page)">
+            <li [class.active]="currentPage == page" *ngFor="let page of pages" (click)="changePage(page)">
                 <a>{{ page }}</a>
             </li>
             <li [class.disabled]="currentPage == pages.length">
