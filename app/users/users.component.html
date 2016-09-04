@@ -1,6 +1,6 @@
 <h1>Users</h1>
 <p>
-    <a [routerLink]="['NewUser']" class="btn btn-primary">Add User</a>
+    <a routerLink="/users/new" class="btn btn-primary">Add User</a>
 </p>
 <table class="table table-bordered">
 	<thead>
@@ -16,7 +16,7 @@
 			<td>{{ user.name }}</td>
 			<td>{{ user.email }}</td>
 			<td>
-                <a [routerLink]="['EditUser', { id: user.id }]">
+                <a [routerLink]="['/users', user.id]">
                     <i class="glyphicon glyphicon-edit"></i>
                 </a>
 			</td>

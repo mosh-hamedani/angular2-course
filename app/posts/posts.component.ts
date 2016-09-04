@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {PostService} from './post.service';
-import {UserService} from '../users/user.service';
-import {SpinnerComponent} from '../shared/spinner.component';
-import {PaginationComponent} from '../shared/pagination.component';
+import { PostService }       from './post.service';
+import { UserService }       from '../users/user.service';
+
+import * as _ from 'underscore'; 
 
 @Component({
     templateUrl: 'app/posts/posts.component.html',
@@ -17,9 +17,7 @@ import {PaginationComponent} from '../shared/pagination.component';
             border-color: #ecf0f1; 
             color: #2c3e50;
         }
-    `],
-    providers: [PostService, UserService],
-    directives: [SpinnerComponent, PaginationComponent]
+    `]
 })
 export class PostsComponent implements OnInit {
 	posts = [];
